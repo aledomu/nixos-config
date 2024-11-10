@@ -1,12 +1,20 @@
 {
   description = "Personal NixOS configuration";
 
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+  };
 
-  outputs = { self, nixpkgs, ... }: {
+  outputs = { self, nixpkgs, nixos-wsl, ... }: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [ /etc/nixos/configuration.nix ./apps-dev.nix ./settings.nix ] ;
+      modules = [
+        nixos-wsl.nixosModules.default
+        ./wsl.nix
+        ./settings.nix
+        ./apps-dev.nix
+      ];
     };
   };
 }
