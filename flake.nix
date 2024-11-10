@@ -14,6 +14,7 @@
         ./wsl.nix
         ./settings.nix
         ./apps-dev.nix
+        { system.stateVersion = "24.05"; }
       ];
     };
   };
