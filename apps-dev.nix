@@ -14,8 +14,6 @@
       weechat
 
       git
-      ghc
-      texlive.combined.scheme-full
 
       (pkgs.vim_configurable.customize {
         name = "vim";
