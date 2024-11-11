@@ -13,6 +13,7 @@
       minicom
       weechat
 
+      fzf
       git
 
       (pkgs.vim_configurable.customize {

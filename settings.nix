@@ -2,6 +2,11 @@
 {
   i18n.defaultLocale = "es_ES.UTF-8";
 
+  programs.ssh = {
+    extraConfig = "AddKeysToAgent yes";
+    startAgent = true;
+  };
+
   nix = {
     gc = {
       automatic = true;
