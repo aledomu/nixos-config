@@ -10,11 +10,22 @@
     ];
   };
 
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enable = true;
+      dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   environment = {
 
     variables.EDITOR = "vim";
 
     systemPackages = with pkgs; [
+
+      distrobox
 
       nix-search-cli
 
