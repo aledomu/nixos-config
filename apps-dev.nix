@@ -39,6 +39,7 @@
             vim-fugitive
             vim-gitgutter
             vim-lsp
+            vim-lsp-settings
 
             vimtex
             vim-pandoc
