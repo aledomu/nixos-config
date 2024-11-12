@@ -1,6 +1,15 @@
 { pkgs, ... }:
 
 {
+
+  programs.tmux = {
+    enable = true;
+    clock24 = true;
+    plugins = with pkgs.tmuxPlugins; [
+      vim-tmux-navigator
+    ];
+  };
+
   environment = {
 
     variables.EDITOR = "vim";
@@ -9,7 +18,6 @@
 
       nix-search-cli
 
-      tmux
       minicom
       weechat
 
@@ -40,6 +48,7 @@
             vim-gitgutter
             vim-lsp
             vim-lsp-settings
+            vim-tmux-navigator
 
             vimtex
             vim-pandoc
@@ -50,4 +59,5 @@
 
     ];
   };
+
 }
