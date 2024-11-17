@@ -1,4 +1,5 @@
 { pkgs, ... }:
+
 {
   wsl = {
     enable = true;
@@ -7,4 +8,7 @@
     startMenuLaunchers = true;
     useWindowsDriver = true;
   };
+
+  system.stateVersion = "24.05";
+
 }
