@@ -1,4 +1,5 @@
 { pkgs, ... }:
+
 {
   i18n.defaultLocale = "es_ES.UTF-8";
 
@@ -12,6 +13,7 @@
       automatic = true;
       dates = "weekly";
     };
+
     settings = {
       auto-optimise-store = true;
       experimental-features = "nix-command flakes";
