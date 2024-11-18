@@ -4,8 +4,6 @@ params@{ pkgs, ... }:
   variables.EDITOR = "vim";
 
   systemPackages = with pkgs; [
-    nix-search-cli
-
     minicom
     weechat
 
