@@ -3,6 +3,8 @@
 {
   i18n.defaultLocale = "es_ES.UTF-8";
 
+  environment.systemPackages = with pkgs; [ nixos-generators ];
+
   programs.ssh = {
     extraConfig = "AddKeysToAgent yes";
     startAgent = true;
