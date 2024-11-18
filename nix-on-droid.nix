@@ -2,6 +2,10 @@ params@{ pkgs, ... }: let
   env-dev = import ./modules/env-dev.nix params;
 in
 {
+  nix.extraOptions = ''
+    experimental-features = nix-command flakes
+  '';
+
   environment = {
     etcBackupExtension = ".bak";
 
