@@ -21,6 +21,7 @@ params@{ pkgs, ... }:
           set wrap
           set scrolloff=8
           set backspace=indent,eol,start
+          set mouse=a
 
           set hidden
           set noswapfile
