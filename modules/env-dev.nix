@@ -29,6 +29,7 @@ params@{ pkgs, ... }:
         '';
 
         packages.myplugins.start = with pkgs.vimPlugins; [
+          vim-vinegar
           fzf-vim
           undotree
           vim-dispatch
