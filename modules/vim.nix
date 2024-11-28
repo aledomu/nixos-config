@@ -1,8 +1,6 @@
 { pkgs, ... }:
 
-pkgs.vim_configurable.customize {
-  name = "vim";
-
+pkgs.vim.customize {
   vimrcConfig = {
     customRC = ''
       set nocompatible
