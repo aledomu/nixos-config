@@ -31,6 +31,7 @@ pkgs.vim.customize {
       vimtex
       vim-pandoc
       vim-pandoc-syntax
+      vim-table-mode
     ];
   };
 }
