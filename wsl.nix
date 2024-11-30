@@ -12,7 +12,6 @@ params@{ pkgs, ... }:
   imports = [
     ./modules/settings-nixos.nix
     ./modules/virtualisation.nix
-    ./modules/tmux.nix
   ];
 
   environment = import ./modules/env-dev.nix params;
