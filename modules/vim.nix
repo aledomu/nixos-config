@@ -14,6 +14,8 @@ pkgs.vim.customize {
       set hidden
       set noswapfile
       set incsearch
+
+      let g:slime_target = "vimterminal"
     '';
 
     packages.myplugins.start = with pkgs.vimPlugins; [
@@ -26,6 +28,7 @@ pkgs.vim.customize {
       vim-gitgutter
       vim-lsp
       vim-lsp-settings
+      vim-slime
       vim-tmux-navigator
 
       vimtex
