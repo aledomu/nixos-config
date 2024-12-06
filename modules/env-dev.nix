@@ -4,7 +4,7 @@ params@{ pkgs, ... }:
   variables.EDITOR = "vim";
 
   systemPackages = with pkgs; [
-    abduco
+    dtach
     minicom
     weechat
 
