@@ -3,6 +3,7 @@ params@{ pkgs, ... }:
 {
   wsl = {
     enable = true;
+    docker-desktop.enable = true;
     defaultUser = "nixos";
     usbip.enable = true;
     startMenuLaunchers = true;
