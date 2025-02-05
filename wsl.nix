@@ -15,8 +15,5 @@ params@{ pkgs, ... }:
     ./modules/virtualisation.nix
   ];
 
-  environment = import ./modules/env-dev.nix params;
-
   system.stateVersion = "24.05";
-
 }

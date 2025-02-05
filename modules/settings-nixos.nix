@@ -4,7 +4,13 @@
   i18n.defaultLocale = "es_ES.UTF-8";
   console.keyMap = "es";
 
-  environment.systemPackages = with pkgs; [ nixos-generators ];
+  environment.systemPackages = with pkgs; [
+    git
+    nixos-generators
+
+    dtach
+    minicom
+  ];
 
   programs.ssh = {
     extraConfig = "AddKeysToAgent yes";
