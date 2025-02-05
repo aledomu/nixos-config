@@ -1,8 +1,6 @@
 params@{ pkgs, ... }:
 
 {
-  variables.EDITOR = "vim";
-
   systemPackages = with pkgs; [
     dtach
     minicom
@@ -10,7 +8,5 @@ params@{ pkgs, ... }:
 
     fzf
     git
-
-    (import ./vim.nix params)
   ];
 }
