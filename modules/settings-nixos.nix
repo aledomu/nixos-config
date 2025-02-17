@@ -4,13 +4,23 @@
   i18n.defaultLocale = "es_ES.UTF-8";
   console.keyMap = "es";
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [ xdg-desktop-portal-kde ];
+    config.common.default = "kde";
+  };
+
   environment.systemPackages = with pkgs; [
     git
     nixos-generators
 
     dtach
     minicom
+
+    flatpak-builder
   ];
+
+  services.flatpak.enable = true;
 
   programs.ssh = {
     extraConfig = "AddKeysToAgent yes";
