@@ -22,9 +22,13 @@
 
   services.flatpak.enable = true;
 
-  programs.ssh = {
-    extraConfig = "AddKeysToAgent yes";
-    startAgent = true;
+  programs = {
+    ssh = {
+      extraConfig = "AddKeysToAgent yes";
+      startAgent = true;
+    };
+
+    nix-ld.enable = true;
   };
 
   nix = {
